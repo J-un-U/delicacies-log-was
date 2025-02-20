@@ -4,7 +4,7 @@
 <mapper namespace="com.example.delicacieslogwas.dao.UserDao">
 
     <!-- 사용자 정보 조회 -->
-    <select id="getUserById" parameterType="Long" resultType="com.example.delicacieslogwas.dto.UserDto">
+    <select id="getUserById" parameterType="map" resultType="map">
         SELECT USER_ID, PASSWORD, USER_NM, EMAIL
         FROM USERS
         WHERE USER_ID = #{userId}

@@ -7,6 +7,12 @@ spring:
     username:
     password:
     driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 1800000
 logging:
   level:
     root: INFO
