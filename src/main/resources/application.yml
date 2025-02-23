@@ -3,7 +3,7 @@ spring:
     active: dev
     include: secret
   datasource:
-    url: jdbc:oracle:thin:@a3o59xtps8bp4z0y_high?TNS_ADMIN=/Users/junu/study/delicacies-log/wallet/Wallet_A3O59XTPS8BP4Z0Y
+    url: jdbc:oracle:thin:@a3o59xtps8bp4z0y_high?TNS_ADMIN=/Users/iyoseb/Desktop/Coding/project/wallet/Wallet_A3O59XTPS8BP4Z0Y
     username: ADMIN
     password: 6308Wnsdn@45
     driver-class-name: oracle.jdbc.OracleDriver

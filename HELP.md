@@ -6,4 +6,3 @@
 
 데이터 베이스 연결방법
 https://gnivomweb.tistory.com/170
-        
