@@ -5,6 +5,7 @@ import com.example.delicacieslogwas.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,8 +30,8 @@ public class UserController {
         return user != null ? ResponseEntity.ok(user) : ResponseEntity.notFound().build();
     }
 
-    @PostMapping
-    public ResponseEntity<String> createUser(@RequestBody UserDto user) {
+    @PostMapping("/join")
+    public ResponseEntity<String> createUser(@Valid @RequestBody UserDto user) {
         boolean isSuccess = userService.createUser(user);
         return isSuccess ? ResponseEntity.ok("유저 생성에 성공 하였습니다!") : ResponseEntity.badRequest().body("유저 생성에 실패하였습니다!");
     }

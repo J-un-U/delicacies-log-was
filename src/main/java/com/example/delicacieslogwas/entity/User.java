@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,6 +41,7 @@ public class User {
      * 기본값 'N'은 DB 레벨에서 적용됩니다.
      * JPA가 DDL을 직접 생성하도록 할 때는 columnDefinition을 통해 명시해줄 수도 있습니다.
      */
+
     @Column(name = "OUT_YN")
     private String outYn;
 
@@ -77,4 +80,16 @@ public class User {
     @Column(name = "DEL_YN")
     private String delYn;
 
+
+    public void setUserId(@NotBlank(message = "아이디는 필수 항목입니다.") String userId) {
+    }
+
+    public void setPassword(@NotBlank(message = "비밀번호는 필수 항목입니다.") String password) {
+    }
+
+    public void setUserNm(@NotBlank(message = "이름은 필수 항목입니다.") String userNm) {
+    }
+
+    public void setEmail(@Email(message = "올바른 이메일 형식을 입력해주세요.") String email) {
+    }
 }
