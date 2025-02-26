@@ -1,8 +1,7 @@
 package com.example.delicacieslogwas.dao;
 
-import com.example.delicacieslogwas.entity.User;
+import com.example.delicacieslogwas.dto.UserDto;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.Map;
 
@@ -12,5 +11,5 @@ public interface UserDao {
     Map<String, Object> getUserById(Map<String, Object> param);
 
     // 사용자 추가
-    int insertUser(User user);
+    void insertUser(UserDto user);
 }

@@ -11,7 +11,7 @@
     </select>
 
     <!-- 사용자 추가 -->
-    <insert id="insertUser" parameterType="com.example.delicacieslogwas.dto.UserDto">
+    <insert id="insertUser" parameterType="UserDto" >
         INSERT INTO USERS (USER_ID, PASSWORD, USER_NM, EMAIL)
         VALUES (#{userId}, #{password}, #{userNm}, #{email})
     </insert>

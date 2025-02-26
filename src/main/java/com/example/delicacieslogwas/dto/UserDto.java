@@ -32,7 +32,7 @@ public class UserDto {
         this.email = email;
     }
 
-//    Lombok의 @Data, @Getter 어노테이션 사용시 하단 코드를 축약가능
+//    Lombok @Data, @Getter 어노테이션 사용시 하단 코드를 축약가능
 /*    public String getUserid() {
         return userid;
     }

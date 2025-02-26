@@ -4,6 +4,7 @@ import com.example.delicacieslogwas.entity.User;
 import com.example.delicacieslogwas.dao.UserDao;
 import com.example.delicacieslogwas.dto.UserDto;
 import com.example.delicacieslogwas.service.UserService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 
@@ -32,15 +33,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean createUser(UserDto userDto) {
 
-        // DTO -> Domain 변환
+        // DTO -> Entity 변환
         User user = new User();
-        user.setUserId(userDto.getUserId());
-        user.setPassword(userDto.getPassword());
-        user.setUserNm(userDto.getUserNm());
-        user.setEmail(userDto.getEmail());
+        BeanUtils.copyProperties(userDto, user);
 
         // DB 저장
-        userMapper.insertUser(user);
+        userMapper.insertUser(userDto);
 
         return true;
     }

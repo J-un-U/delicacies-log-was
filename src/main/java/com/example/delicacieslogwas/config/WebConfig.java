@@ -15,4 +15,6 @@ public class WebConfig implements WebMvcConfigurer{
                 .allowedMethods(CorsConfiguration.ALL).allowedHeaders(CorsConfiguration.ALL)
                 .allowedOriginPatterns(CorsConfiguration.ALL);
     }
+
+
 }

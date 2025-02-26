@@ -80,16 +80,4 @@ public class User {
     @Column(name = "DEL_YN")
     private String delYn;
 
-
-    public void setUserId(@NotBlank(message = "아이디는 필수 항목입니다.") String userId) {
-    }
-
-    public void setPassword(@NotBlank(message = "비밀번호는 필수 항목입니다.") String password) {
-    }
-
-    public void setUserNm(@NotBlank(message = "이름은 필수 항목입니다.") String userNm) {
-    }
-
-    public void setEmail(@Email(message = "올바른 이메일 형식을 입력해주세요.") String email) {
-    }
 }
